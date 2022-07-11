@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<button><a href="StopWatch.html">stopWatch</a></button><br/><br/>
+	<input type="text" id = "txt1"><br/><br/>
+	<input type="button" value="StartTimer" onclick="startTimer()"/>
+	<input type="button" value="ResetTimer" onclick="reset()"/>
+
+	<h1 id="ans"></h1>
+
+	<script type="text/javascript">
+		var a;
+		var c;
+		function startTimer() {
+			a = document.getElementById('txt1').value;
+			document.getElementById('ans').innerHTML=a;
+			c = setInterval(updateTimer,1000);
+		}
+		function updateTimer(){
+			a--;
+			temp = document.getElementById('ans');
+			if(temp.innerHTML<=0){
+				clearInterval(c);
+				document.write('<img src="Timeout.png">');
+			}
+			else{
+				temp.innerHTML=a;
+			}
+	}
+	</script>
+</body>
+</html>
