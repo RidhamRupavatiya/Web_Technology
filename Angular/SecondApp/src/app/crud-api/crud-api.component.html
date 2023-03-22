@@ -1,0 +1,54 @@
+    <form [formGroup]="myForm" (ngSubmit)="insert()">
+        <table>
+            <tr>
+                <td class="form-label">Enter Name</td>
+                <td>:</td>
+                <td><input class="form-control" type="text" formControlName="name"/></td>
+                <td>
+                    <span style="color: red" *ngIf="myForm.controls.name.touched && myForm.controls.name.invalid">
+                        Please Enter a Name
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="form-label">Enter Age</td>
+                <td>:</td>
+                <td><input type="text" class="form-control" formControlName="age"/></td>
+                <td>
+                    <span style="color: red" *ngIf="myForm.controls.age.touched && myForm.controls.age.invalid">
+                        Please Enter a Age
+                    </span>
+                </td>
+            </tr>
+            <br/>
+            <tr>
+                <td colspan="3" *ngIf="idToEdit==-1">
+                    <input type="submit" class="button btn-primary" value="Add Faculty" [disabled]="!myForm.valid"/>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="3" *ngIf="idToEdit!=-1">
+                    <input type="submit" class="button btn-primary" value="Edit Faculty" [disabled]="!myForm.valid"/>
+                </td>
+            </tr>
+        </table>
+        <br />
+    </form>
+
+    <table border="1" class="table">
+        <tr>
+            <th>Name</th>
+            <th>
+                Age
+            </th>
+            <th>Delete</th>
+            <th>Edit</th>
+        </tr>
+        <tr *ngFor="let fac of faculties; let i=index">
+            <td>{{ fac.name }}</td>
+            <td>{{ fac.age }}</td>
+            <td><button class="button btn-outline-danger"(click)="delete(i)">Delete</button></td>
+            <td><button class="button btn-outline-warning"(click)="edit(i)">Edit</button></td>
+        </tr>
+    </table>

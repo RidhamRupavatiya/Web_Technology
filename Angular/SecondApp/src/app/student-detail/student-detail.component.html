@@ -1,0 +1,18 @@
+<div class="card col-md-2">
+    <img [src]="data.avatar"/>
+    <hr/>
+    <div class="card-body">
+        <div class="col">Name: {{data.name}}</div>
+        <div class="col">City: {{data.city}}</div>
+        <div class="col">Department: {{data.department}}</div>
+        <div class="col">Roll No: {{data.roll_no}}</div>
+        <div class="col">UserName: {{data.username}}</div>
+        <div class="col">Password: {{data.password}}</div>
+        <div class="col">Id: {{data.id}}</div> 
+    </div>
+<div class="col-12">
+    <button routerLink="/students" class="btn btn-primary">Back</button>
+    <button type="delete" class="btn btn-danger" (click)="delete()">Delete</button>
+    <button type="edit" class="btn btn-warning" routerLink="/student/edit/{{data.id}}">Edit</button>
+</div>
+</div>

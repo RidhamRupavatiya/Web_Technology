@@ -1,0 +1,50 @@
+<h2 align="center">Gooogle Form</h2>
+<br/>
+<form class="row g-3" [formGroup]="myForm" (ngSubmit)="insert()">
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">CreatedAt :</label>
+      <input type="text" formControlName="createdAt" class="form-control" id="inputEmail4"/>
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Name :</label>
+      <input type="text" formControlName="name"class="form-control" id="name"/>
+    </div>
+    <div class="col-12">
+      <label for="url" class="form-label">Photo :</label>
+      <input type="text" formControlName="avatar"class="form-control" id="url" placeholder="https://imgurl"/>
+    </div>
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">Roll No. :</label>
+      <input type="text" formControlName="roll_no" class="form-control" id="inputCity"/>
+    </div>
+    <div class="col-md-6">
+        <label for="inputCity" class="form-label">Department :</label>
+        <input type="text" formControlName="department" class="form-control" id="department"/>
+      </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">City :</label>
+      <input type="text" formControlName="city" class="form-control" id="city"/>
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustomUsername" class="form-label">UserName:</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+          <input type="text" formControlName="username" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+          <div class="invalid-feedback">
+            Please choose a username.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label">Password :</label>
+        <input type="text" formControlName="password"class="form-control" id="password"/>
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label">ID No.:</label>
+        <input type="text" formControlName="id"class="form-control" id="id"/>
+      </div>
+    <div class="col-12">
+      <button type="submit" *ngIf="id==-1" class="btn btn-primary">Add Student</button>
+      <button type="submit" *ngIf="id>0" class="btn btn-primary">Edit Student</button>
+    </div>
+  </form>
