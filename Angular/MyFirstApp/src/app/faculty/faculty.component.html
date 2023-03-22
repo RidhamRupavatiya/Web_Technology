@@ -1,0 +1,14 @@
+<img [src] = "PathToLogo" width="350px">
+<div class="row">
+    <div class="card" class = "col-md-2" *ngFor = "let fac of Faculties">
+        <img [src]="fac.FacultyImage" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{fac.FacultyName}}</h5>
+        <p class="card-text">{{ fac.FacultyEducationQualification }}</p>
+        <p class="card-text">{{ fac.FacultyDesignation }}</p>
+        <!-- <a href="#" class="btn btn-primary">Details</a> -->
+        <button class="btn btn-primary">delete</button>
+        <button class="btn btn-secondary">Edit</button>
+        </div>
+    </div>
+  </div>
