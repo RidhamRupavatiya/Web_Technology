@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>snackGame</title>
+	<link rel="stylesheet" type="text/css" href="snack.css">
+</head>
+<body onload="placeKhavanu()" onkeydown="checkKey(event)">
+	<img src="snack.png" height="100px" id="image">
+	<img src="khavanu.jpg" width="80px" id="khavanu">
+	<table>
+		<tr>
+			<td></td>
+			<td align="center"><button onclick="startup()">up-^</button></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><button onclick="startleft()"><=left</button></td>
+			<td></td>
+			<td><button onclick="startright()">right=></button></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button onclick="startdown()">down-V</button></td>
+			<td></td>
+		</tr>
+	</table>
+	<script src="snack.js"></script>
+</body>
+</html>
