@@ -1,0 +1,14 @@
+td img{
+  margin: 10px;
+  width :200px;
+}
+body{
+  background-image: linear-gradient(-45deg ,  rgb(99, 249, 147) , rgb(0, 255, 255) , rgb(3, 183, 183));
+  /*background-image: radial-gradient(Ellipse , rgb(0, 255, 242), rgb(144, 238, 144));*/
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+img:hover{
+   cursor:pointer;
+   border: 0.1px dotted black;
+}
